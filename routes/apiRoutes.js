@@ -4,7 +4,6 @@ const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 const router = express.Router();
 
-// Load the initial data from db.json
 let db = require("../db/db.json");
 
 router.get("/api/notes", (req, res) => {
