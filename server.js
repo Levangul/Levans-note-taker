@@ -1,16 +1,25 @@
-const express = require('express');
+const express = require("express");
+const path = require("path"); // Import the 'path' module
 const app = express();
-const PORT = 3001 ||  process.env.PORT;
+const PORT = process.env.PORT || 3001;
 
+// Import routes
+const htmlRoutes = require("./routes/htmlRoutes");
+const apiRoutes = require("./routes/apiRoutes");
 
-app.use(express.static('public'));
-app.use(express.urlencoded({extended: true}));
+// Middleware
+app.use(express.static("public"));
 app.use(express.json());
 
-const apiRoutes = require("./routes/apiRoutes");
-app.use(apiRoutes);
-const htmlRoutes = require("./routes/htmlRoutes");
+// Use routes
 app.use(htmlRoutes);
+app.use(apiRoutes);
 
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+// Catch-all route for non-existent routes
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
+app.listen(PORT, () =>
+    console.log(`App listening on http://localhost:${PORT}`)
+);
