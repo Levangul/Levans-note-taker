@@ -3,7 +3,7 @@
 
   ## Description
 
-  This is a simple logo maker which can be created by user input from command line... you can choose shape, color and add text to your logo. 
+  This is simple application that allows users to create and store notes. 
 
   ## Table of contents
 
@@ -16,26 +16,27 @@
 
   ## Installation
 
-  To install this app you will need to clone down repository and install inquirer and jest from command line
+  To install this app you will need to clone down repository and install express and uuid
 
   ## Usage
 
-  By entering node index.js in your command line.
-
-  [Untitled_ Feb 29, 2024 10_31 PM.webm](https://github.com/Levangul/levans-SVG-Logo-maker/assets/150108077/fca6929c-82af-46e2-a65a-4f1f7d2e6ceb)
   
+
+  ![screencapture-localhost-3001-notes-2024-03-07-22_22_43](https://github.com/Jetniksyla/Event-Space/assets/150108077/3104f41e-000e-48d1-80b0-29cc6e1f9e2c)
+  
+
   
   ## License
  
 
   ## Tests
 
-  You can find svg.test.js  file where tests are located, to run the test use `npm test` in your terminal
+  N/A
 
   ## Contribution
 
   N/A
-  gi
+  
   ## Contact
 
   If you have any questions please contact me
